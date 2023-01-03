@@ -170,7 +170,65 @@ public class UserController {
     }
 }
 ```
+9. Now run the project and test it:
+Run in the API tool of your preference a `GET` request with the url and path created in your controller.
+In this case `http://localhost:8080/user`. As you may see here, we get nothing in return so need to add data.
+![testingApi](https://raw.githubusercontent.com/raulpenate/Spring_Postgres_JPA/Main/screenshots/exampleOne.png)
+10. Send a `POST` request with`http://localhost:8080/user`. 
+```json
+{
+   "name": "Randal Kolo Muani",
+   "email": "randal.kolo@gmail.com",
+   "priority": 1
+}
+```
+And after that one send another with:
+```json
+{
+  "name": "Julián Álvarez",
+  "email": "julyalva@gmail.com",
+  "priority": 2
+}
+```
+![testingApi](https://raw.githubusercontent.com/raulpenate/Spring_Postgres_JPA/Main/screenshots/exampleTwo.png)
+11. Now send the `GET` request to `http://localhost:8080/user` and see the magic!!. We get both of the users we added.
+![testingApi](https://raw.githubusercontent.com/raulpenate/Spring_Postgres_JPA/Main/screenshots/exampleThree.png)
+12. We can consult by `id` seding a  `GET` request to `http://localhost:8080/user/7` for e.g. And we get the user with `id` 7 in this case:
+```json
+{
+  "name": "Julián Álvarez",
+  "email": "julyalva@gmail.com",
+  "priority": 2
+}
+```
+![testingApi](https://raw.githubusercontent.com/raulpenate/Spring_Postgres_JPA/Main/screenshots/exampleFour.png)
+13. And we also can consult by `id` seding a  `GET` request to `http://localhost:8080/user/query?priority=1` for e.g. And we get the user where `priority` == `1` in this case:
+```json
+{
+   "name": "Randal Kolo Muani",
+   "email": "randal.kolo@gmail.com",
+   "priority": 1
+}
+```
+![testingApi](https://raw.githubusercontent.com/raulpenate/Spring_Postgres_JPA/Main/screenshots/exampleFive.png)
+14. To delete the user or our DB with a `DELETE` request to `http://localhost:8080/user/6`. If it was successful we receive the message that `User by id: 6 was deleted`.
+![testingApi](https://raw.githubusercontent.com/raulpenate/Spring_Postgres_JPA/Main/screenshots/exampleSix.png)
+We can check that in our database `Randa Kolo Muani` no longer exist.
+![testingApi](https://raw.githubusercontent.com/raulpenate/Spring_Postgres_JPA/Main/screenshots/exampleSeven.png)
+15. And finally the last cool thing we can do with `Spring` is that we don't need to code the `UPDATE` method, we can just send a `POST` with the `id` of the data that we want to update and that's it, for e.g:
+```json
+{
+  "id": 7,
+  "name": "Julián Baltasar Mariano José Luis de la Santísima Trinidad Álvarez",
+  "email": "julyalva@gmail.com",
+  "priority": 1
+}
+```
+![testingApi](https://raw.githubusercontent.com/raulpenate/Spring_Postgres_JPA/Main/screenshots/exampleEight.png)
+And we appreciate in our DB that the change was made.
+![testingApi](https://raw.githubusercontent.com/raulpenate/Spring_Postgres_JPA/Main/screenshots/exampleNine.png)
 
+And that's it!!, I hope you enjoyed this journey learning Spring with me 🥳🙌.
 ---
 
 ## 🧑‍💼 Spring MVC Components
