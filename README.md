@@ -125,7 +125,7 @@ public class UserService {
 
 ```
 * A bean in Spring is a Java object that is managed by the Spring container. It is an object that is instantiated, assembled, and otherwise managed by the Spring IoC container. These beans are created from configuration metadata, which can be specified in various ways, such as Java annotations, XML, or Java code.
-* he [Inversion of Control (IoC)](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-introduction) container is a component in a Spring application that manages the lifecycle and dependencies of beans. It reads configuration metadata, creates and wires beans, and manages their lifecycle events.
+* The [Inversion of Control (IoC)](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-introduction) container is a component in a Spring application that manages the lifecycle and dependencies of beans. It reads configuration metadata, creates and wires beans, and manages their lifecycle events.
 8. Create `UserController` inside the `Controllers` package.
 ```java
 @RestController // This annotation indicates that this class will handle HTTP requests
