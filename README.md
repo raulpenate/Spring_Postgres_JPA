@@ -15,7 +15,7 @@ Some cool features include:
 
 In this tutorial( based in [this video](https://www.youtube.com/watch?v=vTu2HQrXtyw)) I gonna create a simple SpringBoot project using `Java`, `JDK 17 Corretto` and `Gradle-Groovy`, but it's your choice to use the Language, JDK or dependency tool that you prefer.
 
-1. Start the project, add JPA and the SQL driver of your choice, it this tutorial I gonna use postgres.
+1. Start the project, add JPA and the SQL driver of your choice, in this tutorial I gonna use postgres.
 2. Create the  ```Controller-Service-Repository``` pattern structure in your ```com.example.projectpackage```, that is inside ```src/main/java```, just add the following packages: **Models, Controllers, Repositories, Services**.  
    ![img](https://miro.medium.com/max/720/1*neBcAZJyLGpE7KHc3sH8bw.webp)
 3. In ```applications.propreties``` add the connection to you DB, e.g:
